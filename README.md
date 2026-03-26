@@ -26,18 +26,6 @@ Frontend:
 * JavaScript
 * Bootstrap
 
-Project Structure:
-
-Recommendation_System/
-│── database/
-│── mlcode/
-│── models/
-│── static/
-│── templates/
-│── app.py
-│── config.py
-│── README.md
-
 Installation & Setup:
 
 1. Clone the repository:
