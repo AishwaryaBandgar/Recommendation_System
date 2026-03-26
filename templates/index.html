@@ -1,0 +1,34 @@
+<!-- Jinja Templates -->
+{% extends 'layout.html' %}  
+
+{% block content %}
+
+<h3 class="mb-4">Movies & Series</h3>
+
+<div class="row">
+
+{% for m in movies %}
+
+<div class="col-md-3 mb-4">
+
+<div class="card text-center">
+
+<a href="/movie/{{m.content_id}}">
+
+<img src="{{m.poster}}" class="card-img-top img">
+
+</a>
+
+<div class="card-body">
+<p class="card-title">{{m.contentname}}</p>
+</div>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

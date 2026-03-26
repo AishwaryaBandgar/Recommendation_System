@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<h3 class="mb-4">Recommended For You</h3>
+
+<div class="row">
+
+{% for r in rec %}
+
+<div class="col-md-3 mb-4">
+
+<div class="card text-center">
+
+<a href="/movie/{{r.content_id}}">
+
+<img src="{{r.poster}}" class="card-img-top img">
+
+</a>
+
+<div class="card-body">
+<p class="card-title">{{r.contentname}}</p>
+</div>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

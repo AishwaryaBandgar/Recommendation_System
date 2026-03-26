@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="row">
+
+<div class="col-md-4">
+    <img src="{{movie.poster}}" class="img-fluid rounded">
+</div>
+
+<div class="col-md-8">
+
+    <h2>{{movie.contentname}}</h2>
+
+    <p><strong>Genre:</strong> {{movie.genre}}</p>
+    <p><strong>Type:</strong> {{movie.type}}</p>
+
+    <p>{{movie.description}}</p>
+
+    <form action="/like/{{movie.content_id}}" method="post">
+        <button class="btn btn-success">👍 Like</button>
+    </form>
+
+</div>
+
+</div>
+
+<hr>
+
+<h4 class="mt-4">Similar Content</h4>
+
+<div class="row mt-3">
+
+{% for r in rec %}
+
+<div class="col-md-3 mb-4">
+
+<div class="card text-center">
+
+<a href="/movie/{{r.content_id}}">
+
+<img src="{{r.poster}}" class="card-img-top img">
+
+</a>
+
+<div class="card-body">
+<p class="card-title">{{r.contentname}}</p>
+</div>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
